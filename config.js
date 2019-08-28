@@ -1,6 +1,5 @@
 const frisby = require('frisby');
 
-
 frisby.globalSetup({
     request: {
         headers: {
