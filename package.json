@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest"
   },
-  "jest" : {
-    "reporters" : [
+  "jest": {
+    "reporters": [
       "default",
       [
         "./node_modules/jest-html-reporter",
