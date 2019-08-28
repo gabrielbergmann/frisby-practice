@@ -1,0 +1,29 @@
+{
+  "name": "firsby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest" : {
+    "reporters" : [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Relatório de execução",
+          "outputPath": "./report/test-report.html",
+          "dateFormat": "dd/mm/yyyy"
+        }
+      ]
+    ]
+  },
+  "author": "Gabriel.Bergmann",
+  "license": "ISC",
+  "dependencies": {
+    "frisby": "^2.1.2",
+    "jest": "^24.9.0",
+    "jest-html-reporter": "^2.5.0"
+  }
+}
