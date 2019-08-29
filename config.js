@@ -1,9 +1,5 @@
 const frisby = require('frisby');
+let bearer = '';
 
-frisby.globalSetup({
-    request: {
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    }
-});
+
+//33af0e3ec90a34f8ba996f3f2c639785
