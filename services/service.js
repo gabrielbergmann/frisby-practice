@@ -35,20 +35,17 @@ function login(user, password) {
         })
 }
 
-function postLeaderSituation() {
+function postRequest(url, body) {
     return frisby
-        .post('https://platform-homologx.senior.com.br/t/senior.com.br/bridge/1.0/rest/hcm/moods/queries/leadersSituation?activeEmployeeId=undefined', {
+        .post(url, {
             agent,
             body: {
-                "q": null, "page": 1,
-                "size": 10
+                body
             }
         })
 }
 
 module.exports = {
     login,
-    postLeaderSituation
+    postRequest
 }
-//4fd0077c7483c3e4ea0feff60a293404
-//            config.bearer = json2.substring(164, 196);
