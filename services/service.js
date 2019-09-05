@@ -4,9 +4,7 @@ const agent = new https.Agent({
     rejectUnauthorized: false
 });
 require('../config');
-let json2
-
-const url = ' https://platform-homologx.senior.com.br:8243/t/senior.com.br/bridge/1.0/rest/'
+let token;
 
 function login(user, password) {
     return frisby
@@ -16,22 +14,6 @@ function login(user, password) {
                 "username": user,
                 "password": password
             }
-        })
-        .then((resp) => {
-            let response = resp.json;
-            json2 = JSON.parse(JSON.stringify(response.jsonToken));
-            return frisby.globalSetup({
-                request: {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Bearer ' + json2.substring(164, 196)
-                    }
-                }
-            })
-        })
-        .catch(error => {
-            console.error("Error:: " + error);
-            throw error;
         })
 }
 

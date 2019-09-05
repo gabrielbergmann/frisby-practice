@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "frisby": "^2.1.2",
+    "jasmine": "^3.4.0",
     "jest": "^24.9.0",
     "jest-html-reporter": "^2.5.0"
   }
