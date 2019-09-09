@@ -15,6 +15,19 @@ function login(user, password) {
                 "password": password
             }
         })
+        .then(async (json) => {
+            let body = JSON.parse(JSON.stringify(json._body))
+            let jsonToken = JSON.parse(body)
+            token = JSON.parse(jsonToken.jsonToken)
+            frisby.globalSetup({
+                request: {
+                    headers: {
+                        'Authorization': 'Bearer ' + token.access_token,
+                        'Content-Type': 'application/json',
+                    }
+                }
+            })
+        });
 }
 
 function postRequest(url, body) {
